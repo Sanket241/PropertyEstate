@@ -15,7 +15,7 @@ const Header = () => {
                         <h1 className='font-bold text-sm sm:text-xl flex flex-wrap'>
                             <img src="./logo.png" alt="" width="30px" />
                             <span className='text-slate-500 p-1' >Property</span>
-                            <span className='text-slate-700 p-1' >Pulse</span>
+                            <span className='text-slate-700 p-1' >Estate</span>
                         </h1>
                     </NavLink>
                     <form className='bg-slate-100 p-3 rounded-lg flex items-center' >

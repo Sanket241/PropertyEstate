@@ -41,7 +41,7 @@ const SignUp = () => {
       setLoading(false)
       setError(data.message)
       navigate('/sign-in')
-      console.log(data)
+      console.log(data);
     } catch (error) {
       setLoading(false)
       setError(data.message)
@@ -63,7 +63,7 @@ const SignUp = () => {
 
         
         </form>
-        <div className='flex gap-2 mt-5' >
+        <div className='flex gap-3 mt-5' >
           <p>Have an account?</p>
           <NavLink to="/sign-in"><span className='text-blue-700' >Sign in</span></NavLink>
         </div>
