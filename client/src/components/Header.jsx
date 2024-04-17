@@ -1,10 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { FaSearch } from 'react-icons/fa'
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
-    // const { currentUser } = useSelector((state) => state.user);
+    const { currentUser } = useSelector((state) => state.user);
 
     return (
         <>
@@ -26,7 +26,7 @@ const Header = () => {
                         <li className='hidden sm:inline text-slate-700 hover:underline' ><NavLink to="/">Home</NavLink></li>
                         <li className='hidden sm:inline text-slate-700 hover:underline' ><NavLink to="/about">About</NavLink></li>
 
-                        {/* <NavLink to='/profile'>
+                        <NavLink to='/profile'>
                             {currentUser ? (
                                 <img
                                     className='rounded-full h-7 w-7 object-cover'
@@ -36,8 +36,8 @@ const Header = () => {
                             ) : (
                                 <li className=' text-slate-700 hover:underline'> Sign in</li>
                             )}
-                        </NavLink> */}
-                        <li className='hidden sm:inline text-slate-700 hover:underline' ><NavLink to="/sign-in">Sign In</NavLink></li>
+                        </NavLink>
+                        {/* <li className='hidden sm:inline text-slate-700 hover:underline' ><NavLink to="/sign-in">Sign In</NavLink></li> */}
                     </ul>
                 </div>
 
