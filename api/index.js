@@ -1,18 +1,18 @@
 import dotenv from 'dotenv';
 import express from 'express';
 import MongoDb from './db/Conn.js';
-// import userRouter from './routes/userRoute.js';
 import authRouter from './routes/authRoute.js';
-// import cookieParser from 'cookie-parser';
+import userRouter from './routes/userRoute.js';
+import cookieParser from 'cookie-parser';
 dotenv.config();
 const port = process.env.PORT || 5000;
 
 const app = express();
 
 app.use(express.json());
-// app.use(cookieParser());
-// app.use('/api/user', userRouter);
+app.use(cookieParser());
 app.use('/api/auth', authRouter);
+app.use('/api/user', userRouter);
 
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;
