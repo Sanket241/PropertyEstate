@@ -82,7 +82,6 @@ export default function Profile() {
         body: JSON.stringify(formData),
       });
       const data = await res.json();
-      console.log(data);
       if (data.success === false) {
         dispatch(updateUserFailure(data.message));
         return;
